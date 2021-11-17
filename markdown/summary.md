@@ -32,7 +32,7 @@
 - 표현식안에 함수선언도 가능
 
 ### HTML Fragments
-- querySelector : dom 객체 select
+- querySelector : dom 객체 select 
 - createElement(tag) : tag 생성
 - inner... : text나 html등의 데이터 삽입
 - append : dom 객체 안에 하위 dom 객체 삽입
