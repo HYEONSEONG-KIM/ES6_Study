@@ -23,7 +23,7 @@
 - 밖에 함수를 선언하여도 화살표 함수에서의 this는 window객체
 - 함수 파라미터에 초기값을 지정해 줄 수 있음(지정해 주지 않으면 undefinded 출력)
 
-## STTRING
+## STRING
 ### 백틱(`)
 - 가독성 혹은 문법상 String을 + 기호로 연달아 연산하는 것은 좋지 않음
 - 이러한 단점을 보완하기 위해 `(백틱)기호 사용
@@ -50,3 +50,11 @@
 - includes() : String에서 찾고자하는 단어를 파라미터로 넘겨서 포함되면 true반환
 - repeat() : 해당 문자열을 파라미터로 넣은 숫자만큼 반복
 - startWith() : 문자가 파라미터로 받은 단어로 시작하면 true(반대는 endsWith())
+
+## ARRAY
+-  Array.Of() : 괄호 안에 element 넣어주면 배열로 생성 -> element가 많을 때 유용
+-  Array.from() : 배열은 아니지만 배열 같은 객체(array-like Object)를 배열로 만듬 - > button같은 element가 여러개 있을때 전체 element를 불러와 array로 생성 가능
+- Array.find() : ()안의 주어진 판별 함수를 만족하는 첫 번째 요소의 값 반환
+- Array.findIndex() : find와 같은 기능 -> 반환값 index
+- Array.fill() : array를 첫 인덱스 부터 마지막 인덱스 까지 파라미터로 채워짐, (value,idx) -> idx번째 부터의 모든요소를 value로 채워줌, (value,idx1,idx2) -> idx1 부터 2 까지 value로 채워줌 
+- Array.includes() : 파라미터가 포함 되는지 boolean 타입으로 리턴
