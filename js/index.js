@@ -20,6 +20,7 @@ console.log(title);
 document.body.append(title);
 */
 
+/* More String Improvements
 const isEmail = email => email.includes("@naver.com");
 console.log(isEmail("kim@naver.com"));
 
@@ -31,3 +32,18 @@ console.log(displayName);
 
 const myName = "Kim HS";
 console.log(myName.startsWith("K"));
+*/
+
+/*//Array
+const freinds = Array.of("kim", "Lee", "An", "Park");
+console.log(freinds);
+
+const buttons = document.querySelectorAll("button");
+Array.from(buttons).forEach(button => {
+    button.addEventListener("click",() => console.log("test"))
+})
+
+freinds.fill("*".repeat(5));
+console.log(freinds);
+*/
+
