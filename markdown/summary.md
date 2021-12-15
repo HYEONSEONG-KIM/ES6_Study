@@ -58,3 +58,22 @@
 - Array.findIndex() : find와 같은 기능 -> 반환값 index
 - Array.fill() : array를 첫 인덱스 부터 마지막 인덱스 까지 파라미터로 채워짐, (value,idx) -> idx번째 부터의 모든요소를 value로 채워줌, (value,idx1,idx2) -> idx1 부터 2 까지 value로 채워줌 
 - Array.includes() : 파라미터가 포함 되는지 boolean 타입으로 리턴
+
+## DESRUCTURING(비구조화)
+### Object Destructing
+- 큰 오브젝트(타겟 오브젝트, 우측에 선언)에서 특정 변수나 그 안에 속한 작은 오브젝트에 접근할 수 있도록 해줌
+- Object(객체)를 다룰 때 유용
+- 큰 오브젝트 안에 꺼내고자 하는 값이 없을 때 default value 설정 가능
+- 일반 변수 : variable = 초기값, 객체 : ObjectNm : {variable = 초기값} = 초기 객체
+### Array Destructing
+- API로 부터 응답받은 데이터와 같이 데이터를 조작할 필요 없을 때 array형태로 만들어야 하는 상황에서 유용 
+- Object는 key을 가지고 비구조화 하였다면 배열은 index로 비구조화
+- const [] = 배열 의 형태, []안에 변수 선언하면 순서대로 값 할당
+- 순서를 건너 뛸 수는 없음
+### Renaming
+- 객체에서 key값의 name을 바꿔 줄 수 있음 -> Renaming
+- 바꾸고자 하는 Key값에 : (바꿀 이름) 으로 해주면 됨
+- let 키워드에서 rename 해줄때는 비구조화 문법에서 키워드 빼주고  ()로 전체를 감싸주어 rename
+### Function Destructing
+- 변수들의 가독성을 위해, 각 변수의 기본값을 설정하기 위해 사용
+- 함수의 파라미터를 비구조화로 받아 사용
