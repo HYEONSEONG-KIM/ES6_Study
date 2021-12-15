@@ -47,3 +47,72 @@ freinds.fill("*".repeat(5));
 console.log(freinds);
 */
 
+// DESRUCTURING
+//Object Destructing
+/* const settings = {
+    notification : {
+        follow : true,
+        alerts : true,
+        unfollow : false
+    },
+    color : {
+        theme : "dark"
+    }
+}
+
+const {
+    notification : {follow = false} = {},
+    color
+} =settings;
+
+console.log(follow) */
+
+/* //Array Destructing
+const days = ["Mon", "Tue", "Wen", "Thur", "Fri", "Sat", "Sun"];
+
+const threedays = days.map(function(value,index){
+    if(index < 3){
+        return value;
+    }
+});
+console.log(threedays)
+
+const [ t,r,mon, tue, ss] = days;
+console.log(mon, tue, ss) */
+
+/* // Renaming
+const settings = {
+    notification : {
+        follow : true,
+        alerts : true,
+        unfollow : false
+    },
+    color : {
+        theme : "dark",
+        chosen_color : "dark"
+    }
+}
+
+let chosenColor = "blue";
+console.log(chosenColor);
+
+({
+    color : {chosen_color : chosenColor = "light"}
+} =settings);
+
+console.log(chosenColor); */
+
+/* //Function Destructing
+function saveSettings({notifications, color : {theme}}){
+    console.log(notifications);
+
+}
+saveSettings({
+   notifications : {
+       follow : true,
+       alert: true,
+       mkt: false
+   }, color : {
+       theme : "blue"
+   }
+}) */
