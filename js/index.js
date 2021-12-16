@@ -116,3 +116,93 @@ saveSettings({
        theme : "blue"
    }
 }) */
+
+/* // Value Shorthands
+const follow = checkFllow();
+const alert = checkAlert();
+
+const settints = {
+    notifications : {
+        follow,
+        alert
+    }
+} */
+
+/* // Swapping and Skipping
+let mon = "Sat";
+let sat = "Mon";
+[mon, sat] = [sat, mon];
+console.log(mon,sat)
+
+const array = ["1" , "2" , "3"]
+const [,,three] = array;
+console.log(three) */
+
+//REST AND SPREAD
+/* // Introduction to Spread
+const friends = [1,2,3,4];
+const family = ["a","b","c"];
+
+const hello = {
+    a : "a",
+    b : "b"
+}
+
+const bye = {
+    c : "c",
+    d : "d"
+}
+
+console.log([...friends, ...family])
+console.log(...hello,...bye) */
+
+/* // Spread Applications
+const friends = ["kim", "lee"];
+const newFriends = [...friends, "an"];
+
+console.log(newFriends)
+
+const firstWeek = ["Mon", "Thu", "Wen"];
+const holyWeek = ["Sat", "Sun"];
+const Weekend = [...firstWeek, "Thur", "Fri", ...holyWeek];
+console.log(Weekend)
+
+const lastName = prompt("Last Name");
+const user = {
+    username : "kim",
+    age : 29,
+    // lastName : lastName !== "" ? lastName : undefined
+    ...(lastName !== "" && {lastName}) // 이 경우 spread로 전개하려면 데이터가 object여야 하므로 중괄호로 감싸줌
+}
+console.log(user) */
+
+/* // Rest parameters
+const infiniteArgs = (...params) => console.log(params);
+infiniteArgs(1,"kim", [1,2,3], {kim : "kim", lee : "lee", an : "an"})
+
+const restParam = (first, seconde,...rest) => {
+    console.log(`first : ${first}`)
+    console.log(`seconde : ${seconde}`)
+    console.log(`rest : ${rest}`)
+    
+}
+restParam(1,2,3,4,5) */
+
+// Rest + Spread + Destructure
+const user = {
+    username : "kim",
+    age : 29,
+    password : 1234
+};
+
+const killPass = ({password,...rest}) => rest;
+
+// ex1
+const cleanUser = killPass(user);
+console.log(cleanUser);
+// ex2
+const setCountry = ({country = "KR",...rest}) => ({country,...rest})
+console.log(setCountry(user))
+// ex3
+const rename = ({username : name = "lee", ...rest}) => ({name, ...rest})
+console.log(rename(user))

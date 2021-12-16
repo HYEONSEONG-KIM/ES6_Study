@@ -77,3 +77,30 @@
 ### Function Destructing
 - 변수들의 가독성을 위해, 각 변수의 기본값을 설정하기 위해 사용
 - 함수의 파라미터를 비구조화로 받아 사용
+### Value Shorthands
+- 변수를 선언하고 객체를 선언할 때, 변수의 이름과 객체의 key값이 같고 객체 value에 해당 변수의 값을 넣고 싶으면 key를 생략하고 변수로 선언 가능
+### Swapping and Skipping
+- Swapping : 상수가 아닌 다수의 변수 값을 서로 교환 => [변수1, 변수2] = [변수2의값, 변수1의 값] -> 배열의 비구조화 활용
+- Skipping : 변수 생략 -> 배열의 비구조와 에서 앞순서가 아닌 뒷순서 value 가져올 때 앞의 변수 공백처리 
+
+## REST AND SPREAD
+### Introduction to Spread
+- Spread는 기본적으로 변수를 가져와서 풀어 헤치고 전개
+- ...배열 or 객체 -> 배열 or 객체안의 value들을 꺼내옴
+- 두 개의 배열 혹은 객체를 하나의 배열(객체)로 만들어 줄 때 유용
+
+### Spread Applications
+- 추가, 삽입, 수정등의 역할을 수행
+- 기존의 요소에 새로운 요소를 추가해 하나의 배열(객체)를 만들 수 있음
+- 조건부(conditional) : 특정 객체에 조건을 주어 처리 => ...(조건) -> 선택적인 속성값(optional object property)
+
+### Rest parameters
+- Rest : spread와 반대로 축소 시키는 것 => 값들을 리스트로 취한 다음 합침
+- 예를 들어 어떤 함수의 파라미터를 출력하는 함수 -> 파라미터를 spread로 선언하면 파라미터들은 축소해서 출력 -> rest의 기본 개념
+- ...이 param으로 들어가면 rest, 그 외는 spread
+
+### Rest + Spread + Destructure
+- 각각 기능을 잘 조합하여 사용하면 유용하게 사용 가능
+- ex1) 배열에서 특정 키 값을 제외 -> 함수의 파라미터로 Destructure+ rest를 사용하여 구현
+- ex2) Destructure를 활용하여 배열의 기본 값을 셋팅하고 rest로 받아 새로운 객체를 만드는 함수
+- ex3) Destructure를 활용하여 변수면을 바꾸어 리턴하는 함수
