@@ -188,7 +188,7 @@ const restParam = (first, seconde,...rest) => {
 }
 restParam(1,2,3,4,5) */
 
-// Rest + Spread + Destructure
+/* // Rest + Spread + Destructure
 const user = {
     username : "kim",
     age : 29,
@@ -205,4 +205,25 @@ const setCountry = ({country = "KR",...rest}) => ({country,...rest})
 console.log(setCountry(user))
 // ex3
 const rename = ({username : name = "lee", ...rest}) => ({name, ...rest})
-console.log(rename(user))
+console.log(rename(user)) */
+
+/* // FOR OF LOOF
+const friends = ["kim", "lee", "An"];
+
+const addHeart =(value,idx, array) => console.log(value,idx,array);
+
+friends.forEach(addHeart);
+
+for(const friend of friends){
+    console.log(friend)
+} */
+
+// PROMISES
+/* // Creating Promises
+const amIsexy = new Promise((resolve, reject)=>{
+    setTimeout(resolve,3000,"ok")
+});
+
+console.log(amIsexy);
+
+setInterval(console.log,1000,amIsexy); */

@@ -104,3 +104,16 @@
 - ex1) 배열에서 특정 키 값을 제외 -> 함수의 파라미터로 Destructure+ rest를 사용하여 구현
 - ex2) Destructure를 활용하여 배열의 기본 값을 셋팅하고 rest로 받아 새로운 객체를 만드는 함수
 - ex3) Destructure를 활용하여 변수면을 바꾸어 리턴하는 함수
+
+## FOR OF LOOF
+- forEach() : 배열 각 인덱스를 순서대로 순회 => 파라미터 순서대로 (값, 인덱스, array(현재 돌고있는 요소)), 중간에 제어 불가
+- for(.. of ..) : 자바의 향상된 for문과 비슷, foreach와는 다르게 파라미터에 변수로 선언 가능, 중간에 제어 가능
+- forEach는 배열만 반복가능, for of는 String의 각 문자를 순회 가능
+
+## PROMISES
+### Introcution to Async
+- Async(비동기성) : 순차적으로 실행되는게 아닌 한 번에 실행 
+
+### Creating Promises
+- Promise : 비동기 작업이 맞이할 미래의 완료 또는 실패와 그 결과 값을 나타낸다 (MDN 직역)
+- callBack Function : 파라미터로 함수를 전달받아, 함수의 내부에서 실행하는 함수
