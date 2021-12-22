@@ -112,8 +112,34 @@
 
 ## PROMISES
 ### Introcution to Async
-- Async(비동기성) : 순차적으로 실행되는게 아닌 한 번에 실행 
+- Async(비동기성) : 순차적으로 실행되는게 아닌 한 번에 실행, 비동기성 함수가 완료되지 않았어도 다른 함수 진행 
+- 대표적으로 setTimeout(일정시간 hold),setInterval(일정시간 동안 반복),jQuery의 Ajax
 
 ### Creating Promises
 - Promise : 비동기 작업이 맞이할 미래의 완료 또는 실패와 그 결과 값을 나타낸다 (MDN 직역)
 - callBack Function : 파라미터로 함수를 전달받아, 함수의 내부에서 실행하는 함수
+
+### Using Promises
+- then : promise가 끝난 후 resolve에 입력한 함수 혹은 값을 실행하는 함수
+- chtch : promise에서 reject(오류)가 발생하면 해당 오류를 catch
+
+### Chaining Promise
+- 결과값이 여러개가 나와야 하는 경우 Chan구조 사용
+- return 값만 정해주면 몇 개든 가능
+- catch는 한 번만 작성
+
+### Promise.all
+- Promise를 실행한 후 진행되는 하나의 Promise를 반환
+- 여러 api를 실행한 후 각 api의 값들을 한 번에 처리할 때 사용
+- Promise.all([p1, p2, p3, ...])
+
+### Promise.race
+- Promise.all 과는 다르게 하나라도 resolve 되거나 reject되면 실행
+- reslove든 reject든 가장 빨리 실행되는 promise 실행
+
+### finally
+- resolve,reject 어느 것이든 모든 실행 후 마지막에 동작
+
+### Real world Promises
+- fetch를 이용하여 해당 URL의 응답 객체 가져오기
+- 응답객체를 어떤 함수로 변환하는 작업 시 그 함수가 promise이면 then 한 번 더 호출

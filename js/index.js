@@ -227,3 +227,92 @@ const amIsexy = new Promise((resolve, reject)=>{
 console.log(amIsexy);
 
 setInterval(console.log,1000,amIsexy); */
+
+/* // Using Promises
+const amIsexy = new Promise((resolve, reject)=>{
+    // setTimeout(resolve,3000,"ok");
+    setTimeout(reject,3000,"error");
+});
+const result = value => console.log(value);
+amIsexy.then(result).catch(result); */
+
+/* // Chaining Promise
+const amIsexy = new Promise((resolve, reject)=>{
+    resolve(2);
+    //reject(2)
+});
+
+// amIsexy.then(number =>{
+//     console.log(number * 2);
+//     return number *2;
+// }).then(otherNumber => {
+//     console.log(otherNumber * 2)
+// });
+const timesTwo = number => number * 2;
+amIsexy
+    .then(timesTwo)
+    .then(timesTwo)
+    .then(timesTwo)
+    .then(timesTwo)
+    // .then(() => {
+    //     throw Error("Something")
+    // })
+    .then(lastNumber => console.log(lastNumber))
+    .then(lastNumber => console.log(lastNumber))
+    .catch(error => console.log(error)) */
+
+/* // Promise.all
+const p1 = new Promise((resolve) => {
+    setTimeout(resolve, 5000,"First")
+})
+
+const p2 = new Promise((resolve,reject) => {
+    // setTimeout(resolve, 1000,"Seconde")
+    setTimeout(reject, 1000,"reject")
+})
+
+const p3 = new Promise((resolve) => {
+    setTimeout(resolve, 3000,"Third")
+})
+
+const motherPromise = Promise.all([p1,p2,p3]);
+
+motherPromise
+    .then(values => console.log(values))
+    .catch(value => console.log(value)); */
+
+/* // Promise.race
+const p1 = new Promise((resolve) => {
+    setTimeout(resolve, 500,"First")
+})
+
+const p2 = new Promise((resolve,reject) => {
+    // setTimeout(resolve, 1000,"Seconde")
+    setTimeout(reject, 1000,"reject")
+})
+
+const p3 = new Promise((resolve) => {
+    setTimeout(resolve, 3000,"Third")
+})
+
+const motherPromise = Promise.race([p1,p2,p3]);
+
+motherPromise
+    .then(values => console.log(values))
+    .catch(value => console.log(value)); */
+
+
+/* // finally
+const p1 = new Promise((resolve,reject) => {
+    setTimeout(reject, 1000,"First")
+})
+    .then(value => console.log(value))
+    .catch(e => console.log(e))
+    .finally(()=>console.log("done"))
+ */
+
+// Real world Promises
+fetch("https://yts.am/api/v2/list_movies.json")
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(e => console.log(e))
